@@ -23,6 +23,23 @@
         .adlam-font {
             font-family: "ADLaM Display", serif;
         }
+
+        /* /Animation css style  */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
     </style>
     <!-- custom Tailwind properties -->
     <script>
@@ -35,8 +52,6 @@
                         'bg-yellow': '#FFDC26',
                         'yellow-text': '#FFDC26',
                         'blonde-bg': '#F9DF8A',
-
-
                     }
                 }
             }
@@ -45,7 +60,7 @@
 </head>
 
 <body>
-    <!-- Header section starts  -->
+    <!-- -----------------------------------------Header section starts  --------------------------->
     <header class="">
         <!-- navbar -->
         <div class="navbar bg-base-100 bg-light-bg lg:px-36 sora-font border border-gray-400 lg:border-none">
@@ -80,38 +95,42 @@
         </div>
 
         <!--------------------------------- Banner / Hero Section ------------------->
-        <section class="px-6 lg:pl-72   my-28">
-            <!-- text-container -->
-            <div class="lg:relative ">
+        <section class="px-6 lg:pl-72 my-28">
+            <!-- Text Container -->
+            <div class="lg:relative">
                 <div class="lg:absolute lg:bottom-96">
-                    <p class="text-6xl adlam-font">Pamper Your Pet,<br> Because They Deserve<br> the Bes</p>
-                    <p class="text-lg text-gray-500 py-4 sora-font">Discover a world of treats, toys, and essentials
-                        handpicked
-                        for <br>
-                        your furry
-                        friends.
-                        Shop now and make tails wag with joy!</p>
-                    <button class="btn btn-wide bg-bg-yellow">Wide</button>
+                    <!-- Animated Text -->
+                    <p class="text-6xl adlam-font animate-float motion-reduce:animate-none">
+                        Pamper Your Pet,<br> Because They Deserve<br> the Best
+                    </p>
 
+                    <p class="text-lg text-gray-500 py-4 sora-font">
+                        Discover a world of treats, toys, and essentials handpicked for <br>
+                        your furry friends. Shop now and make tails wag with joy!
+                    </p>
+                    <button class="btn btn-wide bg-bg-yellow">Wide</button>
                 </div>
-                <!-- image Div -->
-                <img class="" src="images/cat-big.png" alt="" srcset="">
+                <!-- Static Image -->
+                <img src="images/cat-big.png" alt="Happy Cat" />
             </div>
         </section>
+
+
     </header>
 
-    <!-- Main section starts -->
+    <!------------------------------------- Main section starts --------------------------------->
     <main>
 
         <!------------------------------ Browse by category Section -------------------------------->
 
         <h3 class="text-4xl font-bold ml-3 lg:ml-40 adlam-font">Browse By Categories</h3>
 
-        <!--pets cards  -->
+        <!------------Pets Cards--------->
 
-        <section
-            class="w-5/6 mx-auto lg:mx-auto my-10 md:my-12 lg:my-12 grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6 md:gap-10">
-            <!-- card-1 -->
+        <section class="w-5/6 mx-auto lg:mx-auto my-10 md:my-12 lg:my-12 grid grid-cols-2 gap-10
+             md:grid-cols-3 lg:grid-cols-6 md:gap-10">
+
+            <!-- Card-1 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 <figure class="px-10 pt-10">
@@ -122,6 +141,7 @@
                     <p class="sora-font">3 items</p>
                 </div>
             </div>
+
             <!-- card-2 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -133,6 +153,7 @@
                     <p class="sora-font">3 items</p>
                 </div>
             </div>
+
             <!-- card-3 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -144,6 +165,7 @@
                     <p class="sora-font">3 items</p>
                 </div>
             </div>
+
             <!-- card-4 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -155,6 +177,7 @@
                     <p class="sora-font">3 items</p>
                 </div>
             </div>
+
             <!-- card-5 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -166,6 +189,7 @@
                     <p class="sora-font">3 items</p>
                 </div>
             </div>
+
             <!-- card-6 -->
             <div
                 class="card bg-base-100 w-52 bg-blonde-bg shadow-xl  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -187,13 +211,11 @@
 
             <div class="lg:my-20 bg-light-bg block lg:flex gap-4">
 
-
                 <div class="ml-3 lg:ml-40">
 
+                    <!------------------ Left div ------------------->
 
-                    <!------------------ left div ------------------->
-
-                    <!-- text with image container card -->
+                    <!-- Text with image container card -->
 
                     <div
                         class="space-y-9 lg:space-y-4 bg-blonde-bg lg:mx-8 md:w-96 lg:w-96 px-10 pt-10 h-96 lg:h-96 lg:px-10 lg:pt-10  rounded-xl">
@@ -328,8 +350,8 @@
                                     srcset="">
                             </div>
 
-                            <!-- right side text container-->
-                            <div class="">
+                            <!-- Right side text container-->
+                            <div>
                                 <div class="flex items-center lg:justify-center gap-3">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     <span class="">4.5</span>
@@ -569,7 +591,9 @@
                 </div>
             </div>
         </section>
-        <!----------------------------- News latter section -------------------------------->
+
+        <!---------------------------------- News latter section -------------------------------->
+
         <section class="relative lg:top-36 top-64">
             <!-- parent div -->
             <div class=" lg:flex bg-light-bg lg:w-7/12 rounded-xl lg:mx-auto w-5/6 mx-auto p-10 lg:p-10 ">
